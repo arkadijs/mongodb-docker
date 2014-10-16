@@ -14,8 +14,9 @@ Usage:
         arkadi/mongodb \
         /sbin/my_init -- bash -l
 
-- You may skip MONGOD_OPTIONS or set your own. 
-- MONGO_ROOT_PASSWORD and `--auth` are optional. If set, the admin user will be root/qwerty with admin/userAdminAnyDatabase privs.
+- You may skip MONGOD_OPTIONS or set your own.
+- To use syslog, add [--syslog](http://docs.mongodb.org/manual/reference/program/mongod/#cmdoption--syslog) to MONGOD_OPTIONS.
+- MONGO_ROOT_PASSWORD and `--auth` are optional. If set, the admin user will be `root/qwerty` with `admin/userAdminAnyDatabase` privilege assigned.
 - `-ti  ... /sbin/my_init -- bash -l` is optional, only if you want to enter the container in-band, not through [ssh](https://github.com/phusion/baseimage-docker/#login-to-the-container-or-running-a-command-inside-it-via-ssh).
 
 Connect:
