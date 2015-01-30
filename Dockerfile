@@ -1,6 +1,10 @@
-FROM phusion/baseimage:0.9.15
+FROM phusion/baseimage:0.9.16
 MAINTAINER Arkadi Shishlov <arkadi.shishlov@gmail.com>
-RUN curl -sS https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.6.5.tgz \
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get clean \
+    && find /var/lib/apt/lists -type f -delete
+RUN curl -sS https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.6.7.tgz \
         | tar xz --no-same-owner -C /usr/local --strip-components 1 --wildcards -f - \*/bin/\* \
     && mkdir /etc/service/mongod \
     && groupadd -r mongodb \
