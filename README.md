@@ -2,7 +2,7 @@
 
 This image is based on [phusion/baseimage] so it has proper boot sequence and `mongod` process supervision. It also supports MongoDB [authentication].
 
-phusion/baseimage is Ubuntu 14.04 LTS based image with [runit] init, cron, syslog-ng, and sshd.
+phusion/baseimage is Ubuntu 14.04 LTS based image with [runit] init, cron, syslog-ng, and [sshd].
 
 Usage:
 
@@ -29,3 +29,4 @@ The MongoDB binaries used are official build from mongodb.org, but they lack SSL
 [phusion/baseimage]: http://phusion.github.io/baseimage-docker/
 [authentication]: http://docs.mongodb.org/manual/core/security-introduction/
 [runit]: http://smarden.org/runit/
+[sshd]: https://github.com/phusion/baseimage-docker#login-to-the-container-or-running-a-command-inside-it-via-ssh

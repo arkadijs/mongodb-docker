@@ -11,5 +11,6 @@ RUN curl -sS https://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.6.7.tgz \
     && useradd -r -g mongodb mongodb
 ADD mongod.sh /etc/service/mongod/run
 ADD mongo-admin.sh /etc/my_init.d/90_mongo-admin.sh
+RUN rm -f /etc/service/sshd/down
 VOLUME /data/db
-EXPOSE 27017
+EXPOSE 22 27017
